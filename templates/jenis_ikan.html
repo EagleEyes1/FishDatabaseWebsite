@@ -1,0 +1,132 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tambah Jenis Ikan</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <!-- https://fonts.google.com/specimen/Roboto -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css" />
+    <!-- https://fontawesome.com/ -->
+    <link rel="stylesheet" href="{% static 'jquery-ui-datepicker/jquery-ui.min.css' %}" type="text/css" />
+    <!-- http://api.jqueryui.com/datepicker/ -->
+    <link rel="stylesheet" href="{% static 'css/styles/bootstrap.min.css' %}" />
+    <!-- https://getbootstrap.com/ -->
+    <link rel="stylesheet" href="{% static 'css/styles/templatemo-style.css' %}">
+    <!--
+    
+	Product Admin CSS Template
+	https://templatemo.com/tm-524-product-admin 
+	-->
+  </head>
+
+  <body>
+    {% include 'header.html' %}
+    <div class="container tm-mt-big tm-mb-big">
+      <div class="row">
+        <div class="col-xl-7 col-lg-10 col-md-12 col-sm-12 mx-auto">
+          <div style="border-radius: 30px;"class="tm-bg-primary-dark tm-block tm-block-h-auto mt-5">
+            <div class="row">
+              <div class="col-12">
+                <h2 class="tm-block-title d-inline-block d-flex justify-content-center">Tambah Jenis Ikan</h2>
+              </div>
+            </div>
+            <div class="row tm-edit-product-row d-flex justify-content-center">
+              <div>
+                <form action="" method='POST'  class="tm-edit-product-form" enctype ="multipart/form-data">{% csrf_token %}
+                  <div class="form-label-group">
+                    <input 
+                      placeholder="ex. Blabla"
+                      id="jenis_ikan"
+                      name="jenis_ikan"
+                      type="text"
+                      class="form-control validate"
+                      required
+                    />
+                    <label
+                      for="jenis_ikan"
+                      >Jenis Ikan
+                    </label>
+                  </div>
+                  <div class="form-label-group">
+                    <input
+                    placeholder="ex. Blabla"
+                    id="hargakilo"
+                    name="hargakilo"
+                    type="number"
+                    value="Rp."
+                    class="form-control validate"
+                    required
+                  />
+                  <label
+                    for="hargakilo"
+                    >Harga Per Kilo
+                  </label>
+                  </div>
+          
+              
+                  <div class="form-label-group">
+                    <input
+                    placeholder="ex. Blabla"
+                    id="hargaton"
+                    name="hargaton"
+                    type="number"
+                    value="Rp."
+                    class="form-control validate"
+                    required
+                  />
+                    <label
+                    for="hargaton"
+                    >Harga Per Ton
+                    </label>
+                  </div> 
+              
+              
+              <!-- <div class="form-group">
+                <label style="color:#ffffff;" for="image">Gambar Ikan</label>
+                <input type="file" id="image" class="form-control-file"
+                       name="image" accept="image/*" value="" required>
+              </div> -->
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" style="color: #000000; background-color: #e5cda7;">Upload</span>
+                </div>
+                <div class="custom-file">
+                  <input type="file" name="image" class="custom-file-input" style="background-color: #e5cda7;" id="inputGroupFile01" required>
+                  <label class="custom-file-label" for="inputGroupFile01" style="color: #000000; background-color: #e5cda7;">Choose file</label>
+                </div>
+              </div>
+            </div> 
+              <div class="col-11 d-flex justify-content-center" >
+                <button type="submit" class="btn btn-primary btn-block text-uppercase">Simpan</button>
+              </div>
+            </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    {% include 'footer.html' %}
+    
+
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <!-- https://jquery.com/download/ -->
+    <script src="{% static 'jquery-ui-datepicker/jquery-ui.min.js' %}"></script>
+    <!-- https://jqueryui.com/download/ -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- https://getbootstrap.com/ -->
+    <script>
+      $(function() {
+        $("#expire_date").datepicker();
+      });
+    </script>
+  </body>
+</html>
