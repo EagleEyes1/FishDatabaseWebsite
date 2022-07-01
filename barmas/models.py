@@ -10,4 +10,4 @@ class Bmasuk(models.Model):
     p_kend = models.CharField(default="" , max_length = 100, blank= False)
     harga = models.IntegerField(default=0, blank=False) 
     t_datang = models.DateField(auto_now_add=False, auto_now=False, blank=False)
-    b_gambar = models.TextField(max_length = 255, blank=False)
+    b_gambar = models.TextField(blank=False)
