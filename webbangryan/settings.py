@@ -85,8 +85,12 @@ WSGI_APPLICATION = 'webbangryan.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'ddfpji8pcp96l6',
+        'USER': 'rifmbknzrufsvb',
+        'PASSWORD': 'f5e5edb78114296292bf94cb912d0338e7e1ce96e429a57d3e7bbc04ddbd48d2',
+        'HOST': 'ec2-44-197-128-108.compute-1.amazonaws.com',
+        'PORT':  '5432'
     }
 }
 
