@@ -22,10 +22,10 @@ def awal(request):
             for object in baris:
                 if object.j_ikan == jenis_ikan:
                     if keterangan == "Kg":
-                        harga = int(kuantitas) * int(object.h_kg)
+                        harga = float(kuantitas) * int(object.h_kg)
                         break
                     else:
-                        harga = int(kuantitas) * int(object.h_ton)
+                        harga = float(kuantitas) * int(object.h_ton)
                         break
         
             Bmasuk1 = Bmasuk(j_ikan=jenis_ikan, k_ikan=kuantitas, ket=keterangan, m_kend=jenis_mobil, p_kend=plat_mobil, 

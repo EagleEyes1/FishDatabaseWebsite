@@ -4,7 +4,7 @@ from datetime import datetime, date
 # Create your models here.
 class Bmasuk(models.Model):
     j_ikan = models.CharField(default="", max_length = 100, blank= False)
-    k_ikan = models.IntegerField(blank=False)
+    k_ikan = models.DecimalField(blank=False, max_digits=99, decimal_places=5)
     ket = models.CharField(default="", max_length = 10, blank= False)
     m_kend = models.CharField(max_length = 100, blank= False)
     p_kend = models.CharField(default="" , max_length = 100, blank= False)
